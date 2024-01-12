@@ -5,7 +5,9 @@ import com.minhasDespesas.model.UsuarioModel;
 import com.minhasDespesas.repository.UserRepository;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
@@ -34,7 +36,7 @@ public class UsuarioController {
      com a classe que é passada tbm no parametro. Classe essa que é o DTO.
      */
 
-    @PutMapping                     // Verbo HTTP para atualizar um dado
+    @PutMapping    // Verbo HTTP para atualizar um dado
     public ResponseEntity atualizaUsuario (@RequestBody @Valid UsuarioDto usuarioDto){
 
         //Crio uma instancia do model trazendo a referencia pelo id passada na requisição
@@ -44,7 +46,15 @@ public class UsuarioController {
         atualizaUsuario.setSenha(usuarioDto.senha());
         // Atualizo os dados do model com os dados que veio na requisição
         userRepository.save(atualizaUsuario);
-
         return ResponseEntity.ok("Usuario Atualizado com Sucesso!");
     }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity deletaUsuario(@PathVariable Long id){
+
+        UsuarioModel deleteUser = userRepository.getReferenceById(id);
+        userRepository.delete(deleteUser);
+        return ResponseEntity.ok("Exclusão feita com sucesso!");
+    }
+
 }
