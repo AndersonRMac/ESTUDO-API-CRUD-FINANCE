@@ -1,5 +1,6 @@
 package com.minhasDespesas.model;
 
+import com.minhasDespesas.dto.EntradaDto;
 import jakarta.persistence.*;
 
 @Entity
@@ -16,6 +17,11 @@ public class EntradaModel {
     public EntradaModel(String nome, Double valor) {
         this.nome = nome;
         this.valor = valor;
+    }
+
+    public EntradaModel(EntradaDto entradaDto){
+        this.nome = entradaDto.nome();
+        this.valor = entradaDto.valor();
     }
 
     public EntradaModel(){
