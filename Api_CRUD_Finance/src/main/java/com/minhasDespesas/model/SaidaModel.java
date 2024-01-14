@@ -1,5 +1,6 @@
 package com.minhasDespesas.model;
 
+import com.minhasDespesas.dto.SaidaDto;
 import jakarta.persistence.*;
 
 @Entity
@@ -18,6 +19,12 @@ public class SaidaModel {
         this.nome = nome;
         this.vencimento = vencimento;
         this.valor = valor;
+    }
+
+    public SaidaModel (SaidaDto saidaDto){
+        this.nome = saidaDto.nome();
+        this.valor = saidaDto.valor();
+        this.vencimento = saidaDto.vencimento();
     }
 
     public String getNome() {

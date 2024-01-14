@@ -12,9 +12,9 @@ public class EntradaModel {
     @Column(nullable = false)
      private String nome;
     @Column(nullable = false)
-     private Double valor;
+     private Integer valor;
 
-    public EntradaModel(String nome, Double valor) {
+    public EntradaModel(String nome, Integer valor) {
         this.nome = nome;
         this.valor = valor;
     }
@@ -36,11 +36,11 @@ public class EntradaModel {
         this.nome = nome;
     }
 
-    public Double getValor() {
+    public Integer getValor() {
         return valor;
     }
 
-    public void setValor(Double valor) {
+    public void setValor(Integer valor) {
         this.valor = valor;
     }
 }
