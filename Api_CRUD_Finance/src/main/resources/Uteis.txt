@@ -1,0 +1,45 @@
+    {
+    "nome": "Pedro",
+    "valor": 1200
+    },
+    {
+        "nome": "Anderson",
+        "valor": 1800
+    },
+    {
+        "nome": "Amanda",
+        "valor": 1900
+    }
+
+---------------------------------------------------------------------
+{
+        "nome": "Pedro",
+        "email": "teste@teste123.com",
+        "senha": "a4s5d6"
+    },
+    {
+        "nome": "Anderson",
+        "email": "anderson@teste123.com",
+        "senha": "abc123"
+    },
+    {
+        "nome": "Amanda",
+        "email": "amanda@teste123.com",
+        "senha": "321654"
+    }
+   -----------------------------------------------------------------
+{
+    "nome": "Conta Luz",
+    "valor": 130.50,
+    "vencimento": "dia 15"
+}
+{
+    "nome": "Conta Agua",
+    "valor": 80.25,
+    "vencimento": "dia 15"
+}
+{
+    "nome": "Internet",
+    "valor": 99.50,
+    "vencimento": "dia 10"
+}
