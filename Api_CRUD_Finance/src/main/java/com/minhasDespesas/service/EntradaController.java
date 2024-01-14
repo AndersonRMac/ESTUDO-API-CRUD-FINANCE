@@ -1,4 +1,4 @@
-package com.minhasDespesas.controller;
+package com.minhasDespesas.service;
 
 import com.minhasDespesas.dto.EntradaDto;
 import com.minhasDespesas.model.EntradaModel;
@@ -7,7 +7,6 @@ import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 
 @RestController
