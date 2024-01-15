@@ -1,8 +1,4 @@
-<<<<<<< HEAD:Api_CRUD_Finance/src/main/java/com/minhasDespesas/service/SaidaController.java
 package com.minhasDespesas.service;
-=======
-package com.minhasDespesas.controller;
->>>>>>> origin/main:Api_CRUD_Finance/src/main/java/com/minhasDespesas/controller/SaidaController.java
 
 import com.minhasDespesas.dto.SaidaDto;
 import com.minhasDespesas.model.SaidaModel;
