@@ -2,7 +2,6 @@ package com.minhasDespesas.model;
 
 import com.minhasDespesas.dto.UsuarioDto;
 import jakarta.persistence.*;
-import org.springframework.web.bind.annotation.RequestBody;
 
 @Entity                         //Para informar que vai ser uma classe que vai ser uma tabela no banco de dados.
 @Table (name = "tb_usuario")

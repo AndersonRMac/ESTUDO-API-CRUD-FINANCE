@@ -1,7 +1,0 @@
-package com.minhasDespesas.repository;
-
-import com.minhasDespesas.model.EntradaModel;
-import org.springframework.data.jpa.repository.JpaRepository;
-
-public interface EntradaRepository extends JpaRepository<EntradaModel, Long> {
-}
