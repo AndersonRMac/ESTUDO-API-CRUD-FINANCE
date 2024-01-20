@@ -1,5 +1,7 @@
 package com.minhasDespesas.model;
 
+import com.minhasDespesas.dto.MovimentacaoEntradaDto;
+import com.minhasDespesas.dto.MovimentacaoSaidaDto;
 import jakarta.persistence.*;
 
 @Entity
@@ -25,6 +27,19 @@ public class Movimentacao {
     public Movimentacao(String nome, Double valor) {
         this.nome = nome;
         this.valor = valor;
+    }
+
+    public Movimentacao(MovimentacaoEntradaDto movimentacaoEntradaDto){
+        this.tipoMovimentacao = movimentacaoEntradaDto.tipoMovimentacao();
+        this.nome = movimentacaoEntradaDto.nome();
+        this.valor = movimentacaoEntradaDto.valor();
+    }
+
+    public Movimentacao(MovimentacaoSaidaDto movimentacaoSaidaDto){
+        this.tipoMovimentacao = movimentacaoSaidaDto.tipoMovimentacao();
+        this.nome = movimentacaoSaidaDto.nome();
+        this.valor = movimentacaoSaidaDto.valor();
+        this.vencimento = movimentacaoSaidaDto.vencimento();
     }
 
     public Movimentacao(){

@@ -1,5 +1,7 @@
 package com.minhasDespesas.service;
 
+import com.minhasDespesas.dto.MovimentacaoEntradaDto;
+import com.minhasDespesas.dto.MovimentacaoSaidaDto;
 import com.minhasDespesas.model.Movimentacao;
 import com.minhasDespesas.repository.MovimantacaoRepository;
 import jakarta.validation.Valid;
@@ -18,11 +20,17 @@ public class MovimentacaoService {
     @Autowired
     MovimantacaoRepository movimantacaoRepository;
 
-    @PostMapping
-    public ResponseEntity cadastraMovimentacao(@RequestBody @Valid Movimentacao movimentacao){
-
-        movimantacaoRepository.save(movimentacao);
-        return ResponseEntity.ok("Movimentação Cadastrada com Sucesso!!");
+    @PostMapping("/entrada")
+    public ResponseEntity cadastraEntrada(@RequestBody @Valid MovimentacaoEntradaDto movimentacaoEntradaDto){
+        Movimentacao novaMovimentacao = new Movimentacao(movimentacaoEntradaDto);
+        movimantacaoRepository.save(novaMovimentacao);
+        return ResponseEntity.ok("Entrada Cadastrada com Sucesso!!");
+    }
+    @PostMapping("/saida")
+    public ResponseEntity cadastraSaida(@RequestBody @Valid MovimentacaoSaidaDto movimentacaoSaidaDto){
+        Movimentacao novaMovimentacao = new Movimentacao(movimentacaoSaidaDto);
+        movimantacaoRepository.save(novaMovimentacao);
+        return ResponseEntity.ok("Saida Cadastrada com Sucesso!!");
     }
 
     @GetMapping
@@ -44,9 +52,9 @@ public class MovimentacaoService {
 
     }
 
-    @DeleteMapping
-    public ResponseEntity deleteMovimentacao(@RequestBody @Valid Movimentacao movimentacao){
-        Movimentacao movimentacaoASerDeletada = movimantacaoRepository.getReferenceById(movimentacao.getId());
+    @DeleteMapping("/{id}")
+    public ResponseEntity deleteMovimentacao(@PathVariable Long id){
+        Movimentacao movimentacaoASerDeletada = movimantacaoRepository.getReferenceById(id);
         movimantacaoRepository.delete(movimentacaoASerDeletada);
         return ResponseEntity.ok("Movimentação Excluida com Sucesso!!");
     }

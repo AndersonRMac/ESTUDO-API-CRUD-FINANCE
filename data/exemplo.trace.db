@@ -7,3 +7,7 @@ drop table if exist tb_entrada [42001-224]
 2024-01-17 08:19:10.956311-03:00 jdbc[13]: exception
 org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "drop table [*]if exist 'tb_entrada'"; expected "identifier"; SQL statement:
 drop table if exist 'tb_entrada' [42001-224]
+2024-01-20 10:45:00.173438-03:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-224]
+2024-01-20 10:48:44.017861-03:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-224]
