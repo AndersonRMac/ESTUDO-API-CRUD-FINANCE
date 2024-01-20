@@ -1,3 +1,9 @@
 2024-01-14 16:38:40.630090-03:00 jdbc[13]: exception
 org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "[*]TB_ENTRADA"; expected "TRUNCATE"; SQL statement:
 TB_ENTRADA [42001-224]
+2024-01-17 08:19:01.583074-03:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "drop table [*]if exist tb_entrada"; expected "identifier"; SQL statement:
+drop table if exist tb_entrada [42001-224]
+2024-01-17 08:19:10.956311-03:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "drop table [*]if exist 'tb_entrada'"; expected "identifier"; SQL statement:
+drop table if exist 'tb_entrada' [42001-224]

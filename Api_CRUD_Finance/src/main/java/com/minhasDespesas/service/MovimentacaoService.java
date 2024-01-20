@@ -3,12 +3,19 @@ package com.minhasDespesas.service;
 import com.minhasDespesas.model.Movimentacao;
 import com.minhasDespesas.repository.MovimantacaoRepository;
 import jakarta.validation.Valid;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.*;
 
-@RestController ("/movimentacao")
+import java.util.List;
+
+@Service
+@RestController
+@RequestMapping ("/movimentacao")
 public class MovimentacaoService {
 
+    @Autowired
     MovimantacaoRepository movimantacaoRepository;
 
     @PostMapping
@@ -20,8 +27,8 @@ public class MovimentacaoService {
 
     @GetMapping
     public ResponseEntity consultaMovimentacao(){
-        movimantacaoRepository.findAll();
-        return ResponseEntity.ok().build();
+        List<Movimentacao> ConsultaMovimentacoes = movimantacaoRepository.findAll();
+        return ResponseEntity.ok(ConsultaMovimentacoes);
     }
 
     @PutMapping

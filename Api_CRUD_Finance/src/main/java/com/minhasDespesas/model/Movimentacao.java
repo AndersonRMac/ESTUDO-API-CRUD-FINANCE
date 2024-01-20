@@ -35,7 +35,14 @@ public class Movimentacao {
         this.valor = valor;
         this.vencimento = vencimento;
     }
-    
+
+    public Movimentacao(TipoMovimentacao tipoMovimentacao, Long id, String nome, Double valor, String vencimento) {
+        this.tipoMovimentacao = tipoMovimentacao;
+        this.id = id;
+        this.nome = nome;
+        this.valor = valor;
+        this.vencimento = vencimento;
+    }
 
     public Long getId() {
         return id;

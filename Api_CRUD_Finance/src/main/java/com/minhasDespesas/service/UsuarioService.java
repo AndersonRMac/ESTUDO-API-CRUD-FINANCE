@@ -12,7 +12,7 @@ import java.util.List;
 
 @RestController                     //usada pra mostrar que a classe é um controller no padrão MVC
 @RequestMapping("/usuario")         //indica qual o end-point que esse controller vai ouvir
-public class UsuarioController {
+public class UsuarioService {
 
     @Autowired                      // Autorizo a injeção dessa classe com todas as funções dela
     private UserRepository userRepository;
