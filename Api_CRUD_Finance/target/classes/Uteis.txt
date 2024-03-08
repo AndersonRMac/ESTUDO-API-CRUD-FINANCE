@@ -1,44 +1,44 @@
-    {
-    "nome": "Pedro",
-    "valor": 1200
-    },
-    {
-        "nome": "Anderson",
-        "valor": 1800
-    },
-    {
-        "nome": "Amanda",
-        "valor": 1900
-    }
+Resumo:
+
+Criei os DTO's para cada tipo de movimentação;
+Ajustei o model de movimentação para receber os dto's de cada movimentação: entrada e saida;
+Atualizei o CRUD no service para cada movimentação, junto com seus end-points
+
+--------------------------------------------------------------------
+//ENTRADAS
+{
+    "tipoMovimentacao":  0,
+    "nome": "Anderson",
+    "valor": 1650
+}
+{
+    "tipoMovimentacao":  0,
+    "nome": "Adalberto",
+    "valor": 1800
+}
+{
+    "tipoMovimentacao":  0,
+    "nome": "Amanda",
+    "valor": 1750
+}
 
 ---------------------------------------------------------------------
+//SAIDAS
+
 {
-        "nome": "Pedro",
-        "email": "teste@teste123.com",
-        "senha": "a4s5d6"
-    },
-    {
-        "nome": "Anderson",
-        "email": "anderson@teste123.com",
-        "senha": "abc123"
-    },
-    {
-        "nome": "Amanda",
-        "email": "amanda@teste123.com",
-        "senha": "321654"
-    }
-   -----------------------------------------------------------------
-{
+    "tipoMovimentacao": 1,
     "nome": "Conta Luz",
     "valor": 130.50,
     "vencimento": "dia 15"
 }
 {
+    "tipoMovimentacao": 1,
     "nome": "Conta Agua",
     "valor": 80.25,
     "vencimento": "dia 15"
 }
 {
+    "tipoMovimentacao": 1,
     "nome": "Internet",
     "valor": 99.50,
     "vencimento": "dia 10"
